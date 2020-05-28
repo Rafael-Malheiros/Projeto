@@ -15,7 +15,7 @@ a = 0
 presentes = 0
 horario = ""
 print("LOGIN")
-email = input("Digite seu e-mail: \n")  # E-mail que a cesar disponibilizara para os alunos
+email = input("Digite seu e-mail: \n")  # E-mail que a cesar disponibilizará para os alunos
 senha = input("Digite a sua senha: \n")  # A senha é o CPF do aluno
 # O código vai conferir se o confere o e-mail com o cpf do aluno
 nome = input("escreva seu nome:")  # decidimos botar essa parte para demonstrar a home
@@ -23,7 +23,7 @@ profissao = input("Qual a sua profissão:")
 # Se for professor:
 if profissao == "Professor":
     while b == 0:
-        print("\n\nOLA,", nome, "\n\n")
+        print("\n\nOLÁ,", nome, "\n\n")
         print("CHAMADA \nNova chamada \nEm andamento")
         print("HISTÓRICO")  # chamadas ja feitas retiradas do banco de dados da CESAR school
         print("TURMAS")  # Turmas do professor retiradas do banco de dados do CESAR school
@@ -53,7 +53,7 @@ if profissao == "Professor":
 
 
                     print("Seu código é:", codigo_aleatorio)
-                    # Como não sabiamos pegamos da internet a ideia para botar no código
+                    # Como não sabiamos como colocar geolocalização, decidimos fazer apenas o código por enquanto
                     chamadas = chamadas + 1
                     a = a + 1
             elif opcao_0 == "Em andamento":
@@ -106,7 +106,7 @@ if profissao == "Professor":
     # Se for aluno:
 if profissao == "Estudante":
     while b == 0:
-        print("\n\nOLA,", nome, "\n\n")
+        print("\n\nOLÁ,", nome, "\n\n")
         print("CHAMADA")  # colocar o código e confirmar presença
         print("TURMA")  # ACESSO AO HORÁRIO DE AULA DO BANCO DE DADOS
         print("MENSAGENS-", notificacao_prof)  # mensagens enviadas e recebidas
@@ -118,6 +118,7 @@ if profissao == "Estudante":
                 codigo_0 = input("Escreva o código:")
                 if codigo_0 == codigo_aleatorio:
                     print("Presença confirmada")
+                    #como não sabemos utilizar geolocalização, decidimos botar só o código no momento
                     presentes += 1
                 else:
                     print("Você não está na sala de aula")
